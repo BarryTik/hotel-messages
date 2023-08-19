@@ -12,7 +12,8 @@ class Company:
         """
         Gets the time of day in greeting format, 'morning', 'afternoon' or 'evening'
         Adjust intervals by changing the _start_hour variables.
-        :returns time_of_day: String, 'morning', 'afternoon' or 'evening' 
+        Expects self.timezone to be an IANA timezone string
+        returns time_of_day: String, 'morning', 'afternoon' or 'evening' 
         """
         # set time of day cutoffs
         morning_start_hour = 3
