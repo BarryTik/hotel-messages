@@ -1,9 +1,0 @@
-{
-    "greetings": {
-        "roomReady": {
-            "template":"Good {} {}, and welcome to {}! Room {} is now ready for you. Enjoy your stay, and let us know if you need anything.",
-            "replacementOrder": ["timeOfDay", "firstName", "companyName", "roomNumber"]
-        }
-    },
-    "farewells":{}
-}

@@ -15,6 +15,17 @@ def get_args():
     parser.add_argument(
         "guest_id"
     )
+
+    # Optional flag arguments
+    parser.add_argument(
+        "--template", "-t",
+        dest="template"
+    )
+    parser.add_argument(
+        "--message", "-m",
+        dest="user_message"
+    )
+
     args = parser.parse_args()
     return args
 

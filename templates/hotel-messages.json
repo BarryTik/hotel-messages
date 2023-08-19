@@ -1,0 +1,5 @@
+{
+    "roomReady": "Good {time_of_day} {first_name}, and welcome to {company_name}! Room {room_number} is now ready for you. Enjoy your stay, and let us know if you need anything.",
+    "pleaseWait": "Good {time_of_day} {first_name}, and welcome to {company_name}! Your room is not ready yet. We're sorry for the delay, and will be in touch soon.",
+    "thankYou": "Goodbye {first_name}! We hope you enjoyed {company_city}. We look forward to seeing you at {company_name} again soon!"
+}

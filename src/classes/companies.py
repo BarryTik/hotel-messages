@@ -1,12 +1,19 @@
 from datetime import datetime
 import pytz
+from ..utilities import get_json
 
 class Company:
-    def __init__(self, company_id, company_name, city, timezone):
+    def __init__(self, company_id, json_path):
         self.id = company_id
-        self.name = company_name
-        self.city = city
-        self.timezone = timezone
+
+        company_json = get_json(json_path)
+
+        for company in company_json:
+            if int(company["id"]) == int(company_id):
+                self.name = company["company"]
+                self.city = company["city"]
+                self.timezone = company["timezone"]
+                
 
     def get_time_of_day(self):
         """
