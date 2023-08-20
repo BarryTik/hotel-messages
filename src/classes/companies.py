@@ -36,7 +36,7 @@ class Company:
         time_of_day = "evening"
         if morning_start_hour <= hour < afternoon_start_hour:
             time_of_day = "morning"
-        elif hour < evening_start_hour:
+        elif afternoon_start_hour <= hour < evening_start_hour:
             time_of_day = "afternoon"
 
         return time_of_day        
