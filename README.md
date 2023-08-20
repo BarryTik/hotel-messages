@@ -80,6 +80,12 @@ When I hear object-oriented I think classes. Python is a language that I both us
 
 ### Design Decisions
 
+#### Goals
+
+This project was fairly open ended. I was given a bulet point list of requirements, but there was freedom in how to accomplish them.
+
+I had ideas for expanding on these requirements and handling more use cases than were presented, but decided to persue a minimally viable product where it works for the cases supplied, and any other features could be added later.
+
 #### File Layout
 
 I wanted the script that was being run to look fairly simple. Get the arguments, build some objects, and output a message. The outcome of this is a short, intuitive script. 
@@ -101,7 +107,7 @@ Who is going to access or change it?
 
 I considered more expansive and adaptable solutions, but in the end decided to assume that all of the data this program used would always look exactly like my sample, and end up in the same place. The rest seemed out of scope for this exercise. In the **Next Steps** section I breifly discuss handling incomplete data and different file paths.
 
-I played around with several different ways to structure the message template JSON, and landed on one that is quite simple. While having every template as just a key value pair could be hard to search through if the file fills up, having multiple files seemed unreasonable for the small amount of data and having nested layers of categories led to too much user input to find the desired template. 
+I played around with several different ways to structure the message template JSON, and landed on one that is quite simple. While having every template as a key value pair could be hard to search through if the file fills up, having multiple files seemed unreasonable for the small amount of data and having nested layers of categories led to too much user input to find the desired template. 
 
 #### Time of Day
 
@@ -111,9 +117,9 @@ A particularly interesting part of this was deciding when it is appropriate to u
 
 ### Testing
 
-The part of this script that I spent the most time testing was the `get_time_of_day` method. As I worked through the intricacies of the `datetime` package I repeatadly ran this function. I made timezone_test.py which imported it, ran it for several different timezone input strings and printed the outputs. As I built out the function I progressed from printing entire datetime strings, to hours, to time of day strings. I later decided this would be a better fit as a class method, so I moved it and this test script won't work anymore.
+The part of this script that I spent the most time testing was the `get_time_of_day` method. As I worked through the intricacies of the `datetime` package I repeatedly ran this function. I made timezone_test.py which imported it, ran it for several different timezone input strings and printed the outputs. As I built out the function I progressed from printing entire datetime strings, to hours, to time of day strings. I later decided this would be a better fit as a class method, so I moved it and this test script won't work anymore.
 
-Once I had everthing connected, I tested the whole script by adding some new objects to the provided data JSONs. My particular interest was in ensuring that the time of day functionality worked so I tested with objects for timezones all across the world.
+Once I had everthing connected, I tested the whole script by adding some new objects to the provided data JSONs. My particular interest was in ensuring that the time of day functionality worked so I tested objects with timezones all across the world.
 
 ### Next Steps
 
